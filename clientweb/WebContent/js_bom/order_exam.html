@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="EUC-KR" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR" />
+<title>Insert title here</title>
+<style type="text/css">
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&family=Noto+Sans+KR:wght@100;300;400&display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400&display=swap')
+	;
+
+body {
+	/* font: 14px 굴림체; */
+	text-align: center;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.main {
+	margin-top: auto;
+	width: 95%;
+	/* width: 900px; */
+}
+
+div.heading {
+	ext-align: center;
+	font-size: 25px;
+	font-family: 'Gothic A1', sans-serif;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+div.subheading {
+	font: 15px;
+	font-family: 'Nanum Pen Script', cursive;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+#outer{
+	margin-top: auto;
+	width: 95%;
+	height: 500px
+	float: left;
+}
+
+.img {
+	width: 40%;
+	padding:30px;
+	margin: 30px;
+	float: left;
+	height: 350px;
+	border: black 3px solid;
+}
+
+#img {
+	width: 350px;
+	height: 350px;
+	margin: auto;
+	align: center;
+}
+
+div.field {
+	margin-bottom: 5px;
+	text-align: right;
+}
+
+#info {
+	float: left;
+	width: 40%;
+	height: 350px;
+}
+
+form {
+	margin: 30px;
+	width: 300px;
+	margin-bottom: 8px;
+	float: right;
+	font-size: 14px;
+	padding-left: 0px;
+}
+
+#result {
+	width: 100%;
+	height: 136px;
+	float: left;
+	padding-left: 0px;
+	font-size: 13px;
+	border: solid 1px black;
+}
+</style>
+<script type="text/javascript">
+	roomName = "루비";
+	function selectRoom() {
+		index = orderform.name.selectedIndex;
+		roomName = "루비";
+		switch (index) {
+		case 0:
+			document.getElementById("img").src = "../images/ruby1.jpg";
+			roomName = "루비";
+			break;
+		case 1:
+			document.getElementById("img").src = "../images/emerald1.jpg";
+			roomName = "에메랄드";
+			break;
+		case 2:
+			document.getElementById("img").src = "../images/sapphire1.jpg";
+			roomName = "사파이어";
+			break;
+		case 3:
+			document.getElementById("img").src = "../images/sky01.jpg";
+			roomName = "스카이1호";
+			break;
+		case 4:
+			document.getElementById("img").src = "../images/star1.jpg";
+			roomName = "별님실";
+			break;
+		default:
+			document.getElementById("img").src = "../images/ruby1.jpg";
+			roomName = "루비";
+			break;
+		}
+	}
+	function order() {
+		bbqQuantity = orderform.bbq.value;
+
+		defaultPrice = 100000;
+		totalPrice = 0;
+		bbqPrice = 10000;
+		blanketPrice = 10000;
+		blanketQuantity = orderform.blanket.value;
+		peopleCount = orderform.count.value;
+		console.log(peopleCount);
+		peoplePrice = 20000;
+		price = defaultPrice + (bbqPrice * bbqQuantity)
+				+ (bbqPrice * blanketQuantity) + (peopleCount * peoplePrice);
+
+		//빈칸이 아니고
+		if (peopleCount != "" && blanketQuantity != "") {
+			if ((peopleCount / 2 - blanketQuantity) > 0) {
+				alert("인원수 대비 침구류의 수가 적습니다. 이불을 추가하세요. 2인당 1 이상");
+			}
+			if (bbqQuantity != "") {
+				document.orderform.subtotal.value = price;
+				document.orderform.tax.value = Math.floor(price * 0.1);
+				document.orderform.total.value = Math.floor(price * 1.1);
+			}
+		}
+	}
+
+	function exec(thisForm) {
+		document.getElementById("room_result").innerHTML = "객실명 :" + roomName;
+		document.getElementById("bbq_result").innerHTML = "바베큐  :"
+				+ thisForm.bbq.value;
+		document.getElementById("blanket_result").innerHTML = "침구류 :"
+				+ thisForm.blanket.value;
+		document.getElementById("people_result").innerHTML = "인원수 :"
+				+ thisForm.count.value;
+		document.getElementById("sub_result").innerHTML = "금액 :"
+				+ thisForm.subtotal.value;
+		document.getElementById("tax_result").innerHTML = "부가세  :"
+				+ thisForm.tax.value;
+		document.getElementById("total_result").innerHTML = "총금액 :"
+				+ thisForm.total.value;
+	}
+</script>
+</head>
+<body>
+	<div class="main">
+		<div class="heading">펜션예약사항</div>
+		<div class="subheading">비수기 세일입니다. 펜션의 모든 방을 10만원에 단, 모든 방은
+			2인용입니다.!!</div>
+		<div id="outer">
+			<div class="img">
+				<img id="img" src="../images/pension.jpg" />
+			</div>
+			<div id="info">
+				<form name="orderform" action="" method="post">
+					<div class="field">
+						객실명: <select name="name" id="name" onchange="selectRoom()">
+							<option>루비</option>
+							<option>에메랄드</option>
+							<option>사파이어</option>
+							<option>스카이1호</option>
+							<option>별님실</option>
+						</select>
+					</div>
+					<div class="field">
+						바베큐시설이용: <input type="text" id="bbq" name="bbq" value=""
+							onchange="order()" />
+					</div>
+					<div class="field">
+						이불추가: <input type="text" id="blanket" name="blanket" value=""
+							onchange="order()" />
+					</div>
+					<div class="field">
+						인원수: <input type="text" id="count" name="count" value=""
+							onchange="order()" />
+					</div>
+					<div class="field">
+						금액: <input type="text" id="subtotal" name="subtotal" value=""
+							readonly="readonly" />
+					</div>
+					<div class="field">
+						부가세: <input type="text" id="tax" name="tax" value=""
+							readonly="readonly" />
+					</div>
+					<div class="field">
+						총금액: <input type="text" id="total" name="total" value=""
+							readonly="readonly" />
+					</div>
+					<div class="field">
+						<input type="button" value="Place Order" onclick="exec(this.form)" />
+					</div>
+				</form>
+				<div id="result">
+					<div id="room_result"></div>
+					<div id="bbq_result"></div>
+					<div id="blanket_result"></div>
+					<div id="people_result"></div>
+					<div id="sub_result"></div>
+					<div id="tax_result"></div>
+					<div id="total_result"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

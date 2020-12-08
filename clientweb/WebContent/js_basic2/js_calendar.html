@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		#outer{
+			width:300px;
+			margin : auto;
+		}
+		#yearMonth{
+			width:300px;
+			background-color: #3a3d3e;
+			color:#a6d8ff;
+			font-size: 16px;
+			text-align: center;
+		}
+		#table{
+			width:300px;
+			background-color: #3a3d3e;
+		}
+		th{
+			width: 25px;
+			height: 23px;
+			padding:10px;
+			color: white;
+			font-size: 14px;
+		}
+		td{
+			width: 25px;
+			height: 23px;
+			padding:10px;
+			color: white;
+			font-size: 14px;
+			text-align: center;
+		}
+		#today{
+			background-color: #0078d7;
+			outline: solid #3a3d3e 3px;
+			outline-offset:-5px;
+		}
+	
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		today = new Date();
+		alert(today);
+		yyyymm="";
+		yyyymm += today.getFullYear()+"년 ";
+		yyyymm += (today.getMonth()+1)+"월 ";
+		document.write("<div id='outer'>"); // 정렬을 위한 div
+		document.write("<div id='yearMonth'>"+yyyymm+"</div>"); // 오늘 년 월 출력
+		arr=new Array();
+		arr=["일","월","화","수","목","금","토"];
+		document.write("<table id='table'> <tr>");
+		for(i=0;i<arr.length;i++)
+			document.write("<th>"+arr[i]+"</th>"); // 월~금 테이블 작성
+		document.write("</tr>");
+		
+		firstDay=new Date();
+		firstDay.setDate(1); // 오늘 날짜에 1일을 넣고
+		firstWeekend=firstDay.getDay(); // 1일의 요일을 구한다.
+		
+		lastDay = new Date();
+		lastDay.setMonth(lastDay.getMonth()+1); // 이번달에 1을 더해 다음 달을 구하고 
+		lastDay.setDate(0); // 0을 넣어 이번달의 마지막 날을 구한다.
+		
+		i=0;
+		while(1){
+			if(i%7==0) // 7 주기로 <tr> 출력하도록 작성
+				document.write("<tr>");
+			if(i<firstWeekend) // 첫주의 요일 정보까지는 빈칸을 출력
+				document.write("<td></td>");
+			else if((i+1-firstWeekend) == today.getDate()) // 오늘 일자와 카운트 중인 일자가 같다면 오늘로 여긴다.
+				document.write("<td id='today'>"+(i+1-firstWeekend)+"</td>"); // 오늘 칸에 id=today를 정의한다.
+				else  // 빈칸 출력 날은 제외하여 1부터 출력.
+				document.write("<td>"+(i+1-firstWeekend)+"</td>");
+			if(i%7 == 6)  // 7 주기로 </tr> 출력하도록 작성
+				document.write("</tr>");
+			i++;
+			if(i==(lastDay.getDate()+firstWeekend)) // 카운트 중인 값이 마지막 날이면 while문을 빠져나간다.
+				break;
+		}
+		document.write("</table>");
+		document.write("</div>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<h1 id ="title">callback함수</h1>
+	<input id="btn" type="button" value="버튼"/>
+	<p id="section">
+		앞에서 표현식으로 정의했던 익명함수가 callback으로 활용될 수 있다.
+		함수를 호출할때 호출시점을 결정해서 바로 함수호출문을 정의하는 것이 아니라
+		이벤트가 발생하거나 특정 시간이 프르거나 어떤 상황에 놓였을때 시스템 내부에서 함수가 실행되어야 하는 시점이 되면 자동으로 함수를 실행될 수 있도록 알려주는 용도로 사용하는 함수
+		어떤 함수의 매개변수로 전달하거나 이벤트가 발생했을때 실행할 함수가 있는 경우 callback으로 활용
+	</p>
+	이벤트가 발생하는 객체.이벤트명 = 함수명 <br/>
+	이벤트가 발생하는 객체.이벤트명=function(){<br/>
+		//이벤트가 발생할때 처리할 문장<br/>
+	}<br/>
+	<script type="text/javascript">
+		//윈도우가 로딩될때 함수가 실행될수 있도록 익명의 함수를 callback으로 등록
+		window.onload = function(){
+			alert("페이지로딩");
+			//페이지가 로딩되면 btn이라는 id로 정의되어있는 <input>태그 버튼에 클릭이벤트를 연결
+			document.getElementById("btn").onclick = function(){
+				alert("버튼이 눌려짐");
+			}
+		};
+	</script>
+</body>
+</html>

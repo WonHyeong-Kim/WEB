@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		#form{
+			float:left;
+		}
+		#result{
+			float:left;
+		}
+	
+	</style>
+	<script type="text/javascript">
+		function calc(){
+			temp = formdata.volume.value;
+			price = 12900;
+			document.getElementById("result").innerHTML= temp * price * 0.9;
+			//document.getElementById("result").innerHTML= (temp * price) - (temp * price)/10;
+		}
+	</script>
+</head>
+<body>
+	<div id="form">
+		<form action="" name="formdata">
+			수량:<input type="text" name="volume" onkeyup="calc()"/>
+			<!-- <span id="result"></span> -->
+		</form>
+	</div>
+	<div id="result"></div>
+</body>
+</html>

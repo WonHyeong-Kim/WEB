@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		div  h2{
+			color: red;
+		}
+		#mylist>li{
+			color:green;
+			background-color: yellow;
+			font-size: 12pt;
+			font-weight: bold;
+		}
+		/* h1+h2{ h1의 형제노드들 중 h2에 적용 
+			color: purple;
+			font-size: 20pt;
+			font-weight: bold;
+		} */
+		h1~h2{
+			color: pink;
+			font-size: 20pt;
+			font-weight: bold;
+		}
+		/* 속성을 검사해서 css적용하기 */
+		[href]{
+			/* border: solid blue 2px; */		
+			border-style: solid;
+			border-color: pink;
+			border-width: 2px;
+		}
+		[target='_blank']{
+			background-color: yellow;
+		}
+		[target='_self']{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<a>사이트와 연결1</a>
+	<a href="#" target="_blank">사이트와 연결2</a>
+	<a href="#" target="_self">사이트와 연결3</a>
+	<a href="#" target="_blank">사이트와 연결4</a>
+	<a href="#" target="_self">사이트와 연결5</a>
+	<h1>css연습1</h1>
+	<h3>css연습1</h3>
+	<h2>css연습1</h2>
+	<h1>css연습1</h1>
+	<h2>css연습1</h2>
+	<h3>css연습1</h3>
+	<h4>css연습1</h4>
+	<ul id="mylist">
+		<li>연습1</li>	
+		<li>연습2</li>
+		<li>연습3</li>
+		<li>연습4</li>
+	</ul>
+	<ul>
+		<li>연습1</li>	
+		<li>연습2</li>
+		<li>연습3</li>
+		<li>연습4</li>
+	</ul>
+	<div>
+		지금은 css에서 사용할 수 있는 선택자의 유형에 대해 살펴보는 시간입니다. 이선택자는 jQuery에서도 동일하게 사용됩니다.
+		<h2>선택자1</h2>
+	</div>
+	<h1>css연습1</h1>
+	<h2>css연습1</h2>
+	<h3>css연습1</h3>
+	<h4>css연습1</h4>
+</body>
+</html>

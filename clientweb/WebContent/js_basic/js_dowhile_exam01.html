@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		do{
+			//id=prompt("숫자를 입력하세요");	
+			pass=prompt("패스워드를 입력하세요");
+			if(pass =="java")
+			{
+				alert("성공로그인");
+				break;
+			}
+			else
+				alert(pass);
+			
+			result =confirm("다시 패스워드 확인?");
+			if(result == true)
+				alert("true가 선택");
+			else
+			{
+				alert("그만하시겠습니까?);
+			}
+				
+		}
+		while(result) // while의 조건식에는 true나 false가 결과인식이나 함수(메소드) 호출
+		
+		/* 	
+		// confirm에서 선택한 버튼을 result에 저장하기
+		result =confirm("다시 패스워드 확인?");
+		alert(result);
+		if(result == true)
+			alert("true가 선택");
+		else
+			alert("true가 선택");
+	 	*/
+	</script>
+</body>
+</html>

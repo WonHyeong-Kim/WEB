@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+</head>
+<body>
+	<h1>dom 탐색 방법</h1>
+	<div id="main">
+		<div class="test1">jquery~</div>
+		<div class="test2">jquery~</div>
+		<div id="test3">jquery~</div>
+		<div id="test4">jquery~</div>
+		<div id="test5">jquery~</div>
+		<a id="attrtest">하이퍼링크</a>
+		<a id="attrtest2">하이퍼링크</a>
+	</div>
+	<div id="result"></div>
+	<form action="">
+		<input type="button" id="htmlbtn" value="html태그 추가하기"/>
+		<input type="button" id="attrbtn" value="속성추가하기"/>
+	</form>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#htmlbtn").on("click", function(){
+				//$("#result").text("<h1>문자열 추가</h1>"); html태그가 실행되지않고 문자열로 추가.
+				$("#result").html("<h1>문자열 추가</h1>");
+			});
+			
+			$("#attrbtn").on("click", function(){
+				$("#attrtest").attr("href","https://www.naver.com");
+				myAttrVal = $("#result").attr("id");
+				alert(myAttrVal);
+				
+				$("#attrtest2").attr({
+					"href":"https://daum.net",
+					"target":"_blank"
+				});
+			});
+		});
+	</script>
+</body>
+</html>

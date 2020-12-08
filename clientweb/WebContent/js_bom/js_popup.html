@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function showData(zip, addr){
+			//alert(zip+addr);
+			// 매개변수로 전달된 값을 부모창에 상세주소와 우편변호를 전달(opener-부모창)
+			opener.document.acorn.zipcode.value = zip;
+			opener.document.acorn.address.value = addr;
+			close();
+		}
+		function test(){
+			// js_popup.html이 화면에 보여질때 호출되는 함수
+			//alert("a");
+			//팝업의 id텍스트 상자 = opener의 id text 상자의 값
+			// 왼쪽에 value를 사용하면 setter의미
+			// 오른쪽에 value를 사용하면 getter의미
+			document.mypopup.id.value =opener.document.acorn.id.value; 
+		}
+	</script>
+</head>
+<!-- onload : 페이지가 로딩되는 시점에 처리하고 싶은 일들이 있는 경우 사용하는 이벤트핸들러 
+			  onload에 test()함수를 연결하면 js_popup.html문서가 메모리에 로딩되어 오픈될때 test()함수가 먼저 실행된다.-->
+<body bgcolor="skyblue" onload="test()">
+	<form action="" name="mypopup">
+		<input type="text" name="id" />
+		<input type="text" name="addr"/>
+		<input type="submit" value="검색"/>
+	</form>
+	<a href="javascript:showData('111-111','서울시 구로동')">구로동</a><br/>
+	<a href="javascript:showData('111-222','서울시 서초동')">서초동</a><br/>
+	<a href="javascript:showData('111-333','서울시 방배동')">방배동</a><br/>
+	<a href="javascript:showData('111-444','서울시 신림동')">신림동</a><br/>
+	<a href="javascript:showData('111-555','서울시 상암동')">상암동</a><br/>
+	
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+	<script type="text/javascript">
+		function testConfirm(){
+			//confirm에서 선택한 버튼이 갖고 있는 값이 result에 저장
+			// true나 false가 저장되므로 if문 안에서 변수만 가지고 사용 가능
+			result = window.confirm("삭제?");
+			if(result){
+				alert("실제 db에서 삭제하는 작업을 수행 - state값 변경");
+			}
+			else{
+				window.alert("취소");
+			}
+		}
+		function searchAddress(){
+			mypopup=window.open("/clientweb/js_bom/js_popup.html","mywin","width=500, height=300,top=100, toolbar=yes,state=yes");
+		}
+		function idcheck(){
+			mypopup=window.open("/clientweb/js_bom/js_popup.html","mywin2","width=500, height=300,top=100, toolbar=yes,state=yes");
+		}
+		function test_number(){
+			// parseInt : 텍스트 상자에 입력하는 값도 문자열로 취급
+			mynum1=window.parseInt(acorn.num1.value);
+			//mynum1=acorn.num1.value;
+			mynum2=parseInt(acorn.num2.value);
+			//mynum2=acorn.num2.value;
+			acorn.result.value = mynum1+mynum2;
+		}
+		function test_number2(){
+			alert("isNaN의 결과 ==>"+isNaN(acorn.num1.value));
+			//alert("isNaN의 결과 ==>"+window.isNaN(acorn.num1.value));
+			alert("eval의 결과 ==>"+eval(acorn.num1.value));
+			data=acorn.num1.value;
+			alert("문자열의 길이 =>"+data.length);
+			data2 = data.trim();
+			alert("공백을 제거한 문자열의 길이 =>"+data2.length);
+		}
+	</script>
+</head>
+<body>
+	<!-- <button> html5에서 사용하는 태그 -->
+	<button onClick="window.alert('경고창')">경고창</button>
+	<button onClick="testConfirm()">확인창</button>
+	<button onClick="test_number()">숫자처리메서드</button>
+	<button onClick="test_number2()">숫자처리메서드2</button>
+	<button onClick="window.close()">닫기</button>
+	
+	<form action="" name="acorn">
+		아이디 : <input type="text" name="id"/>
+		<input type="button" value="아이디 중복 체크" onclick="idcheck()"/><br/>
+		우편번호 : <input type="text" name="zipcode"	value="텍스트상자에 출력되는 값">
+		<input type="button" value="SEARCH ADDRESS" onClick="searchAddress()">
+		<br>
+		
+		상세주소 : <input type="text" name="address"><br/>
+		숫자1:<input type="text" name="num1"/> <br/>
+		숫자2:<input type="text" name="num2"/> <br/>
+		결과:<input type="text" name="result"/> <br/>
+		<input type="submit" value="SEND">
+	</form>
+</body>
+</html>

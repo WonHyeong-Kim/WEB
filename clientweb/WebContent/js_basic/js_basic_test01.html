@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<!-- 4. 외부문서로 정의하고 연결해서 사용하기 -->
+	<script type="text/javascript" src="/clientweb/common/js/test.js"></script>
+	
+	<!-- 2. head태그안에 스크립트를  정의
+		 주로 <head>태그 안에서 함수를 정의하고 필요한 곳에서 호출해서 사용한다.-->
+	<script type="text/javascript">
+		document.write("<h5>자바스크립트테스트</h>");
+		function test(){
+			alert("test");
+		}
+	</script>
+</head>
+<body>
+	<h1>자바스트립트 연습</h1>
+	<!-- 1. body태그에서 정의하고 사용하는 방법 -->
+	<script type="text/javascript">
+		// document.write - 자바스크립트를 연습하기 위한 명령코드
+		document.write("<h1>브라우저에 데이터 출력하기 - 연습용</h1>");
+		document.write("<h1>브라우저에 데이터 출력하기 - 연습용</h1>");
+		test(); // 함수호출
+	</script>
+	
+	<!-- 3. 태그내부에 inline으로 삽입 (이벤트 핸들러를 통해 연결) -->
+	<input type="button" value="자바스크립트 명령어 실행하기" onclick="alert('안녕')"/>
+	<input type="button" value="자바스크립트 함수 실행하기" onclick="test()"/>
+	<input type="button" value="자바스크립트 외부문서의 함수 실행하기" onclick="test2()"/>
+</body>
+</html>

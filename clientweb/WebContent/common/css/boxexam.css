@@ -1,0 +1,21 @@
+@charset "UTF-8";
+#morning{
+	font-size: 30px;
+	font-family: 굴림;
+	color: #107b81;
+}
+#specitive{
+	padding-left:100px;
+	padding-top:30px;
+	padding-bottom:30px;
+	font-size: 15px;
+	font-style: italic;
+	background-color: #a7cece;
+	height: 100px;
+	background-image: url("/clientweb/images/background.gif");
+	background-repeat: no-repeat;
+	position:static;
+	margin:30px;
+	border-radius: 20px;
+	overflow: auto;
+}

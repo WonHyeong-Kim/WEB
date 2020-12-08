@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function idcheck(form){
+			userId = form.id.value;
+			//userId = document.userInfo.id.value;
+			if(userId.length<4)	{
+				document.getElementById("idCheck").innerHTML = "4글자 이상의 글자를 입력하세요";
+				//document.write("4글자 이상의 글자를 입력하세요");
+				// 기존의 문서를 지우고 document.write의 문자열 문서에 출력한다. 
+			}
+			else if(userId == "java"){
+				document.getElementById("idCheck").innerHTML = "이미 사용중인 아이디 입니다.";
+			}
+			else{
+				document.getElementById("idCheck").innerHTML = "";
+			}
+		}
+	
+	</script>
+</head>
+<body>
+	<h1>티몬 회원가입</h1>
+	<h2>필수항목</h2>
+	<form action="" name="userInfo">
+		아이디 : <input type="text" name="id" onkeyup="idcheck(this.form)"/>
+	</form>
+	<div id="idCheck" style="color : red; font-weight: bold;"></div>
+</body>
+</html>

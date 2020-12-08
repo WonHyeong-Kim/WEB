@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>기본 html 연습</title>
+ </head>
+ <body>
+ <!-- 주석문 : 실행되지 않는 문장을 정의할 때 사용 (설명, 용어설명) 
+ 실행하기  http://127.0.0.1:8088/edu/Basic.html -->
+ <p>안녕하세요.<br>
+ <i><b> 아무개</b></i>입니다.</p>
+ <a href="#ss" target="_self">ssssssssssssssssssss</a>
+ <p>
+ 웹 문서를 제작하는 데 쓰이는 기본 프로그래밍 언어 HTML(hypertext markup language)의 최신규격으로, 웹페이지를 구성하는 데 있어 지배적인 역할을 하는 마크업 언어(markup language)이다. 별도 설치 없이 웹브라우저 상에서 다양한 멀티미디어 콘텐츠와 앱 등을 바로 제공할 수 있다.</p>
+ <hr/>
+ 
+ <h1> 지금은 html 연습중 .. </h1>
+ <h2> 지금은 html 연습중 .. </h2>
+ <h3> 지금은 html 연습중 .. </h3>
+ <h4> 지금은 html 연습중 .. </h4>
+ <h5> 지금은 html 연습중 .. </h5>
+ <h6> 지금은 html 연습중 .. </h6>
+ <h7> 지금은 html 연습중 .. </h7>
+ <hr/>
+ <font size="1" face="궁서" color="red">html에서 지양하는 태그</font><br/>
+ <font size="2" face="궁서" color="yellow">html에서 지양하는 태그</font><br/>
+ <font size="3" face="HY견고딕" color="blue">html에서 지양하는 태그</font><br/>
+ <font size="4" face="굴림" color="#0066ff">html에서 지양하는 태그</font><br/>
+ <font size="5" face="굴림" color="#e49cef">html에서 지양하는 태그</font><br/>
+ <font size="6" face="굴림" color="#aef4bb">html에서 지양하는 태그</font><br/>
+ <font size="7" face="굴림" color="#aef4bb">html에서 지양하는 태그</font><br/>
+ <font size="8" face="굴림" color="#aef4bb">html에서 지양하는 태그</font><br/>
+ <h1>H2O</h1>
+ <h1>H<small>2</small>O</h1>
+ <h1>H<sub>2</sub>O</h1>
+ <h1>H<ins>2</ins>O</h1>
+ <h1>H<del>2</del>O</h1>
+ <h1>2<sup>2</sup></h1>
+<!--특수문자 출력하기
+	< : &lt;
+	> : &gt;
+	& : &amp;
+	" : &quot;
+	spac(띄어쓰기) : &nbsp;
+	-->
+ &lt;h1&gt;&amp&nbsp;태그는 문서의 제목을 정의하는 태그이다.
+ <hr/>
+ <h3>이미지 삽입 연습</h3>
+ <h4>절대경로로 이미지 삽입</h4>
+ <!-- 절대경로는 이미지를 요청하는 주소를 full name으로 다 정의
+    http://127.0.0.1:8088/edu/jang1.jpg
+	-->
+ <img src ="http://127.0.0.1:8088/edu/images/jang1.jpg" width="200" height="300" border="1"/>
+ <img src ="/edu/images/jang1.jpg" width="400" height="100" border="2"/>
+ <h4>상대경로로 이미지 삽입</h4>
+ <!-- 상대경로는 현재 문서의 작업 위치를 기준으로 경로를 파악할 수 있도록 정의
+	.  : 현재 디렉토리
+	.. : 상위 디렉토리
+ -->
+ <img src = "./images/jang1.jpg" width ="250" height="350" border="3" />
+ <img src = "../edu/images/jang1.jpg" width ="250" height="350" border="3" />
+
+ <h3>하이퍼링크</h3>
+ <a href="/edu/lounge.html" target="_self" id="ss">문서연결</a>
+ <a href="lounge.html" target="_blank">문서연결</a>
+ <a href="https://www.naver.com">사이트 연결</a>
+ <a href="https://www.daum.net" target="_blank">사이트 연결</a>
+ <a href="/edu/lounge.html"><img src ="http://127.0.0.1:8088/edu/images/jang1.jpg" width="200" height="300" border="1"/></a>
+ </body>
+</html>

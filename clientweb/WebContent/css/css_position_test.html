@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		#outer{
+			background-color: yellow;
+			width: 500px;
+			height: 500px;
+			top:100px;
+			left: 100px;
+			position: absolute;
+		}
+		#jang{
+			background-color: #eaf2d3;
+			width: 100px;
+			position: static;/* 원래 기본 흐름대로 출력 - 위에서 아래로 왼쪽에서 오른쪽으로 배치
+							 	좌표 property를 사용할 수 없다.부모의 위치를 기준으로 배치 */
+			left: 70px;
+			top: 10px;
+		}
+		#kim{
+			background-color: #a7cece;/* 기준위치에서 좌표 프로퍼티에 정의된 값의 위치로 이동, 부모위치를 기준으로 이동한다. */
+			width: 100px;
+			position: absolute;
+			left: 70px;
+			top: 10px;
+		}
+		#lee{
+			background-color: #f0bc2e;
+			width: 100px;
+			position: relative;/* 원래있어야하는 기본위치에서 정의된 위치로 이동 */
+			left: 70px;
+			top: 10px;
+		}
+		#hong{
+			background-color: #a0f090;
+			width: 100px;
+			position: fixed;/* 기준위치에서 정의된 위치로 이동 - 부모의 위치에 영향을 받지 않고 고정된 위치로 이동 */
+			left: 70px;
+			top: 10px;
+		}
+		#jung{
+			background-color: #a0f090;
+			width: 100px;
+			position: absolute;/* 부모의 위치를 기준으로 이동 도큐먼트 기준으로 윈도우의 해상도와 상관없이 무조건 보임 */
+			left: 1000px;
+			top: 200px;
+		}
+		#park{
+			background-color: #f0bc2e;
+			width: 100px;
+			position: fixed;/* 기준위치(top:0, left:0)에서  정의된 위치로 이동 윈도우 기준이므로 윈도우 해상도에서 벗어나면 안보임*/
+			left: 1000px;
+			top: 1000px;
+		}
+	</style>
+</head>
+<body>
+	<div id="outer">
+		<div id="jang">장동건</div>
+		<div id="kim">김어준</div>
+		<div id="lee">이민호</div>
+		<div id="hong">홍길동</div>
+		<div id="jung">정우성</div>
+		<div id="park">박나래</div>
+	</div>
+</body>
+</html>

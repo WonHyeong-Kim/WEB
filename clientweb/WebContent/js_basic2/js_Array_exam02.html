@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		today = new Date();
+		//weekday = new Array(7);
+		str="";
+		
+		weekday=["일","월","화","수","목","금","토"];
+		
+		str +=today.getFullYear()+"년 ";
+		str +=(today.getMonth()+1)+"월 ";
+		str +=today.getDate()+"일 ";	
+		
+		str+= weekday[today.getDay()]+"요일"
+		//document.write(str);
+		document.write(today.toLocaleDateString()+"=========>"+weekday[today.getDay()]+"요일");
+		// pc의 운영체제에 설정되어 있는 locale정보에 맞게 출력
+		// locale정보마다 설정되어 있는 날짜 표기 포맷
+		// 한국 ____년____월___일
+		// 미국 ____/____/____/
+		// 영국____.____.____.
+	</script>
+</body>
+</html>

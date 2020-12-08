@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<input id="btn1" type="button" value="1번버튼"/>
+		<input id="btn2" type="button" value="2번버튼"/>
+		<input id="btn3" type="button" value="3번버튼"/>
+		<input id="btn4" type="button" value="4번버튼"/>
+	</form>
+	<!-- 페이지가 로딩된 후에 자바스크립트 명령문을 실행할 수 있도록 작성
+		  [실행할 내용]
+		   - 1번버튼, 2번버튼
+	
+	
+	 -->
+	 <script type="text/javascript">
+	 	window.onload = function(){
+	 		
+	 		document.getElementById("btn1").onclick = function(){
+	 			alert(document.getElementById("btn1").value);
+	 		}
+	 		document.getElementById("btn2").onclick = function(){
+	 			alert(document.getElementById("btn2").value);
+	 		}
+	 		document.getElementById("btn3").onclick = function(){
+	 			alert(document.getElementById("btn3").value);
+	 		}
+	 		document.getElementById("btn4").onclick = function(){
+	 			alert(document.getElementById("btn4").value);
+	 		}
+	 	}
+	 
+	 </script>
+</body>
+</html>

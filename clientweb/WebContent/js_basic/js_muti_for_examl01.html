@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		for(i=0; i<5; i++)
+		{
+			for(j=0; j<5; j++)
+			{
+				document.write("*");
+			}
+			document.write("<br/>");
+		}
+		
+		for(i=0; i<5; i++)
+		{
+			for(j=0; j<i+1; j++)
+			{
+				document.write("*");
+			}
+			document.write("<br/>");
+		}
+		sum=0;
+		for(i=1; i<=5; i++)
+		{
+			for(j=1;j<=5;j++)
+			{
+				sum++;
+				if(i==j)
+				{
+					document.write("*");
+				}
+				else
+				{
+					document.write(sum+" ");
+				}
+			}
+			document.write("<br/>");
+		}	
+		for(i=1; i<=5; i++)
+		{
+			for(j=1;j<=5;j++)
+			{
+				if(i==3 && j==2)
+				{
+					document.write("너");
+				}
+				else
+				{
+					document.write(2+" ");
+				}
+			}
+			document.write("<br/>");
+		}
+	</script>
+
+</body>
+</html>

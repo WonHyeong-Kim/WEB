@@ -1,0 +1,693 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/*기본 초기화*/
+* {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+body {
+    font-family: 'Noto Sans KR', '맑은 고딕', Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.wholeCover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .7);
+    display: none;
+}
+
+
+/*header*/
+.headerWrap {
+    width: 100%;
+}
+
+.headerIn {
+    max-width: 1280px;
+    height: 50px;
+    margin: auto;
+    line-height: 50px;
+}
+
+.snuh {
+    float: left;
+    display: none;
+}
+
+.headerIn .logo h1 {
+    background: url('img/headerlogo.png') 0 no-repeat;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-indent: -9999px;
+    width: 260px;
+    height: 50px;
+}
+
+.login {
+    float: right;
+}
+
+.login li {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+.login img {
+
+    width: 30px;
+}
+
+.login li:last-child {
+    position: relative;
+}
+
+.mypage {
+    display: none;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    left: -5px;
+    z-index: 5;
+}
+
+.mypageUl {
+    background: rgba(0, 0, 0, 0.49);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.mypageUl > li {
+    display: block;
+    height: 33.3%;
+    line-height: 30px;
+    transition: .5s;
+    width: 100%;
+    text-align: center;
+}
+
+.mypageUl > li:hover a {
+    font-weight: bold;
+}
+
+.mypageUl > li:first-child {}
+
+.mypageUl > li a {
+    color: #fff;
+}
+
+
+.searchWrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: #224c9a;
+}
+
+.search {
+    max-width: 1280px;
+    margin: auto;
+    margin-left: 5%;
+    line-height: 47px;
+    text-align: center;
+}
+
+.search input {
+    display: inline-block;
+    width: 60%;
+    height: 40px;
+    padding: 7px;
+    border: none;
+    margin-right: 5px;
+}
+
+.search button {
+    background: none;
+    outline: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+}
+
+.search button img {
+    width: 100%;
+}
+
+.menuUl > .mClose {
+    display: none;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menuUl {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 5;
+}
+
+.menuUl > li {
+    position: relative;
+    float: left;
+    height: 50px;
+    background: #fff;
+    width: 25%;
+    text-align: center;
+}
+
+.menuUl > li > a {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.menuUl > li.loginM,
+.menuUl > li.res {
+    display: none;
+}
+
+.subbg {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 230px;
+    background: #fff;
+    top: 50px;
+    left: 0;
+    z-index: 9999;
+}
+
+.sub {
+    padding-left: 40%;
+}
+
+.sub3 {
+    padding-left: 32%;
+}
+
+.subbg4 {
+    background: url('img/menulogo.png') #fff;
+    background-repeat: no-repeat;
+}
+
+.sub > li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.sub > li:hover > a {
+    text-decoration: underline;
+    transition: .5s;
+}
+
+.sub > li > a {
+    transition: .5s;
+    font-size: 18px;
+}
+
+.subIn > li {
+    text-indent: 20px;
+    margin-top: 10px;
+}
+
+.subIn > li:hover a {
+    text-decoration: underline;
+    transition: .5s;
+}
+
+
+.sliderWrap {
+    width: 100%;
+}
+
+.slider {
+    max-width: 1600px;
+    margin: 50px auto 0;
+}
+
+.slider img {
+    max-width: 100%;
+    max-height: 460px;
+    margin: auto;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+}
+
+.slick-dots li {
+    float: left;
+    margin-right: 10px;
+    width: 20px;
+    height: 5px;
+    text-indent: -9999px;
+    background: rgba(255, 255, 255, .3);
+    vertical-align: bottom;
+    transition: .5s;
+}
+
+li.slick-active {
+    width: 30px;
+    height: 5px;
+    background: #224c9a;
+}
+
+.slick-dots li:last-child {
+    margin-right: 0;
+}
+
+
+.slick-arrow {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-indent: -9999px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 39px;
+}
+
+.slick-prev {
+    background: url('img/spr_slideVisualBtn.png') 0 0 no-repeat;
+    left: 10%;
+    z-index: 1;
+}
+
+.slick-next {
+    background: url('img/spr_slideVisualBtn.png') no-repeat;
+    background-position: -22px 0;
+    right: 10%;
+}
+
+.slide {
+    position: relative;
+}
+
+.slidertxt1 {
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+
+
+.slidertxt2 span {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid rgba(255, 255, 255, .6);
+    color: #fff;
+    width: 230px;
+    height: 45px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    transition: .5s;
+}
+
+.slidertxt2 span:hover {
+    background: rgba(255, 255, 255, .6);
+    color: #000;
+}
+
+
+
+.slidertxt3 {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slidertxt3 span {
+    display: block;
+    color: #fff;
+    width: 260px;
+    height: 50px;
+    line-height: 45px;
+    font-size: 18px;
+    border: 1px solid rgba(255, 255, 255, .6);
+    text-align: center;
+    transition: .5s;
+}
+
+.slidertxt3 span:hover {
+    background: rgba(255, 255, 255, .6);
+    color: #000;
+}
+
+
+@media(max-width:1024px) {
+    .menuUl > .mClose {
+        display: none;
+    }
+
+    .sub {
+        padding-left: 36%;
+    }
+
+    .sub3 {
+        padding-left: 24%;
+    }
+
+    .subbg4 {
+        background: #fff;
+    }
+}
+
+@media(max-width:960px) {
+    .menuUl > .mClose {
+        display: none;
+    }
+
+    .sub {
+        padding-left: 35%;
+    }
+
+    .sub3 {
+        padding-left: 24%;
+    }
+
+    .subbg4 {
+        background: #fff;
+    }
+
+    .login li {
+        display: inline-block;
+        width: 60px;
+        text-align: center;
+    }
+
+    .login img {
+
+        width: 30px;
+    }
+
+    .mypage {
+        display: none;
+        top: 40px;
+        width: 100px;
+        left: auto;
+        right: 5px;
+    }
+
+    .mypageUl > li {
+        display: block;
+        height: 33.3%;
+        line-height: 30px;
+        transition: .5s;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sliderWrap {
+        width: 100%;
+    }
+
+    .slider {
+        min-width: 100%;
+        height:350px;
+        margin: 50px auto 0;
+  
+    }
+
+    .slider img {
+        max-width: 1280px;
+        height:350px;
+    }
+
+    .slidertxt1 {
+        display: block;
+        position: absolute;
+        width: 300px;
+        height: 50px;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+
+
+    .slidertxt2 span {
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid rgba(255, 255, 255, .6);
+        color: #fff;
+        width: 230px;
+        height: 45px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 18px;
+        transition: .5s;
+    }
+
+    .slidertxt2 span:hover {
+        background: rgba(255, 255, 255, .6);
+        color: #000;
+    }
+
+
+
+    .slidertxt3 {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .slidertxt3 span {
+        display: block;
+        color: #fff;
+        width: 260px;
+        height: 50px;
+        line-height: 45px;
+        font-size: 18px;
+        border: 1px solid rgba(255, 255, 255, .6);
+        text-align: center;
+        transition: .5s;
+    }
+
+    .slidertxt3 span:hover {
+        background: rgba(255, 255, 255, .6);
+        color: #000;
+    }
+}
+
+@media(max-width:768px) {
+
+    .headerIn .logo h1 {
+        background: url('img/headerlogo.png') 0 no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-indent: -9999px;
+        width: 200px;
+        height: auto;
+    }
+
+    .login > li:nth-child(1){
+        display:none;
+    }
+    
+    .login > li:nth-child(2){
+        display:none
+    }
+
+    .menuWrap {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        background: url('img/hamburger.png') no-repeat;
+        background-size: 100%;
+        z-index: 9999;
+        cursor: pointer;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+
+
+    .menuUl, .menuUl.menuUlM {
+        position: fixed;
+        z-index: 9999;
+        width: 80%;
+        left: 0;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        background: url('img/menulogo.png') 100px 160% #fff;
+        background-repeat: no-repeat;
+        transform: translate(0);
+    }
+    
+    .menuUl.menuUlM{
+        left:-80%;
+    }
+
+
+    .menuUl > .mClose, .menuUl.menuUlM > .mClose {
+        position: absolute;
+        right: 15px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url('img/close_w.png') no-repeat;
+        background-size: 30px;
+        text-indent: -9999px;
+        z-index: 9999;
+        top: 10px;
+        cursor: pointer;
+    }
+
+    .menuUl > li, .menuUl.menuUlM > li {
+        position: relative;
+        float: none;
+        height: auto;
+        width: 100%;
+        text-align: left;
+        background: transparent;
+        padding-left: 30px;
+        vertical-align: middle;
+        z-index: 5;
+    }
+
+    .loginM i, .menuUl.menuUlM > .loginM i {
+        font-size: 2em;
+    }
+
+    .menuUl > li > a, .menuUl.menuUlM > li > a {
+        font-size: 1.3em;
+        font-weight: bold;
+        line-height: 50px;
+    }
+
+    .menuUl > li.loginM,
+    .menuUl > li.res, .menuUl.menuUlM > li.loginM,
+    .menuUl.menuUlM > li.res  {
+        display: block;
+    }
+
+    .menuUl > li.loginM, .menuUl.menuUlM > li.loginM {
+        background: #224c9a;
+        width: 100%;
+        height: 50px;
+        color: #fff;
+
+    }
+
+
+    .menuUl > li.res, .menuUl.menuUlM > li.res {
+        color: #224c9a;
+    }
+
+    .menuUl > li.loginM a, .menuUl.menuUlM > li.loginM a {
+        font-weight: normal;
+        font-size: 1.2em;
+    }
+
+    .subbg, .subbg.subbgM {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        top: auto;
+        left: 0;
+    }
+    
+    .subbg.subbgM{
+        display:block;
+    }
+
+
+    .sub, .subbg.subbgM > .sub {
+        padding-left: 30px;
+        height: 100%;
+    }
+
+    .sub3, .subbg.subbgM > .sub3 {
+        padding-left: 30px;
+    }
+
+    .sub > li, .subbg.subbgM > .sub > li {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .sub > li:hover > a, .subbg.subbgM >.sub > li:hover > a{
+        text-decoration: underline;
+        transition: .5s;
+    }
+
+    .sub > li > a, .subbg.subbgM > .sub > li > a{
+        transition: .5s;
+        font-size: 18px;
+    }
+
+    .subIn > li, .subbg.subbgM > .subIn > li{
+        display: block;
+        text-indent: 20px;
+        margin-top: 10px;
+    }
+
+    .subIn > li:hover a,  .subbg.subbgM > .subIn > li:hover a {
+        text-decoration: underline;
+        transition: .5s;
+    }
+
+    .slider {
+        max-width: 1600px;
+        margin: 0px auto 0;
+    }
+
+}

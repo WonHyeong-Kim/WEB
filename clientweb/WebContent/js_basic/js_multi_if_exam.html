@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/* while(1) */
+		{
+			//prompt의 입력값은 문자열로 인식된다.
+			jumsu=prompt("점수를 입력해주세요");
+			num1=prompt("숫자1");// 값을 입력하지않으면 "" == 연산자에 의해서 0으로 변환.
+			num2=prompt("숫자2");
+			alert(num1+num2);
+			alert("100"+"200");
+			if(jumsu<=100 && jumsu >=90)
+				alert("수");
+			else if(jumsu<90 && jumsu >=80)
+				alert("우");
+			else if(jumsu<80 && jumsu >=70)
+				alert("미");
+			else if(jumsu<70 && jumsu >=60)
+				alert("양");
+			else if(jumsu<60 && jumsu >=0)
+				alert("가");
+			else
+				alert("점수가 잘못입력되었습니다.");	
+		}
+		
+	</script>
+</body>
+</html>

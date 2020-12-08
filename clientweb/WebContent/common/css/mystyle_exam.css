@@ -1,0 +1,11 @@
+@charset "UTF-8";
+*{
+	font-family: HY견고딕;
+	font-size: 10pt;
+}
+p{
+	color: pink;
+	font-size: 11pt;
+	border: solid blue 1px;
+	background-color: yellow;
+}

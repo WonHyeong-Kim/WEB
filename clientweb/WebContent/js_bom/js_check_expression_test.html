@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		 
+		function allcheck(){
+			
+			mycheck = document.cbfmt.food;
+			
+			allchkVal=document.cbfmt.allchk.checked;
+			
+			for(i=0;i<mycheck.length;i++){
+				mycheck[i].checked = allchkVal;
+			}
+			
+		}
+		function ckFunc(){
+			mychecklist = document.cbfmt.food;
+			chkVal = "";
+			for(i=0;i<mychecklist.length;i++){
+				if(mychecklist[i].checked) {
+					chkVal+=mychecklist[i].value+" ";	
+				}
+			}
+			document.getElementById("result").innerHTML=chkVal;
+		}
+		window.onload=function(){
+			document.cbfmt.submit.onclick=function(){
+				mychecklist = document.cbfmt.food;
+				chkVal = "";
+				for(i=0;i<mychecklist.length;i++){
+					if(mychecklist[i].checked) {
+						chkVal+=mychecklist[i].value+" ";	
+					}
+				}
+				document.getElementById("result").innerHTML=chkVal;
+			}
+			document.getElementById("allchk").onclick=function(){
+				mycheck = document.cbfmt.food;
+				
+				allchkVal=document.cbfmt.allchk.checked;
+				
+				for(i=0;i<mycheck.length;i++){
+					mycheck[i].checked = allchkVal;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+		<form name="cbfmt">
+			<label>아이스크림</label> 
+			<input type="checkbox" name="food"
+			 value="아이스크림" id="ice"> 
+				<label>커피</label> <input type="checkbox"	
+				name="food" value="커피" id="coffee" checked="checked">
+				 <label>음료수</label> <input type="checkbox" 
+				 name="food" value="음료수" id="beverage"> 
+				<label>모두체크/해제</label>
+			<input type="checkbox" name="allchk" 
+			id="allchk"><br>
+
+			<input name="submit" type="button" value="전송">
+		</form>
+		<div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+</head>
+<body>
+	<h1>dom 탐색 방법</h1>
+	<div id="main">
+		<div class="test1">jquery~</div>
+		<div class="test2">jquery~</div>
+		<div id="test3">jquery~</div>
+		<div id="test4">jquery~</div>
+		<div id="test5">jquery~</div>
+	</div>
+	<form action="">
+		<input type="button" id="nodetest" value="노드 가져오기"/>
+	</form>
+	<script type="text/javascript">
+		//DOM 노드를 액세스
+		$(document).ready(function(){
+			$("#nodetest").on("click",function(){
+				// 특정노드의 하위노드를 모두 가져오기
+				list = $("#main").children();
+				alert(list.length);
+				//$("#main").children()은 node list를 반환
+				// 메소드 체이닝 : 메소드의 결과를 변수에 저장 하지않고 메소드의 결과객체로 또 다른 메소드를 연결해서 호출.
+				// => 메소드의 실행결과로  다시 메소드를 체인처럼 호출하는 방식.
+				$("#main").children().last().css("color", "blue");
+				$("#main").children().first().css("color", "red");
+			});
+			
+		});
+	</script>
+</body>
+</html>

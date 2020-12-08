@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		do{
+			id=prompt("id를 입력하세요");	
+			pass=prompt("패스워드를 입력하세요");
+			if(pass =="java")
+			{
+				alert("성공로그인");
+				break;
+			}
+			else
+				alert("패스워드 틀림");
+			
+			result =confirm("다시 패스워드 확인?");
+			if(result == false)
+			{
+				alert("그만하시겠습니까? 로그인 실패");
+			}
+		}
+		while(result)
+		
+	</script>
+</body>
+</html>

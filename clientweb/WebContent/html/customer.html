@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+ <form method="post">
+  <table border="1" width="330">
+	<tr>
+		<th colspan="2">회원가입</th>
+	</tr>
+	<tr>
+		<td width="100">이름</td>
+		<td><input name="name" size="18" type="text" maxlength="18"/></td>
+	</tr>
+	<tr>
+		<td>사용자ID</td>
+		<td><input name="id" size="18" type="text" maxlength="18"/></td>
+	</tr>
+	<tr>
+		<td>암호</td>
+		<td><input type="password" name="pass" size="16" maxlength="16"/></td>
+	</tr>
+	<tr>
+		<td>암호확인</td>
+		<td><input type="password" name="passcheck" size="16" maxlength="16"/></td>
+	</tr>
+	<tr>
+		<td>주민등록번호</td>
+		<td><input type="text" name="reginumber" size="6" maxlength="6"/>-<input type="password" size="7" maxlength="7"/></td>
+	</tr>
+	<tr>
+		<td>전화번호</td>
+		<td><input type="text" name="phonenumber" size="3" maxlength="3"/>-<input type="text" name="phonenumber" size="4" maxlength="4"/>-<input type="text" name="phonenumber" size="4" maxlength="4"/></td>
+	</tr>
+	<tr>
+		<td>성별</td>
+		<td><input type="radio" name="gender" value="male"/>남자<input type="radio" name="gender" value="female"/>여자</td>
+	</tr>
+	<tr>
+		<td>직업</td>
+		<td><select name="job">
+				<option value="default">선택하여주십시오</option>
+				<option value="wd">웹디자이너</option>
+				<option value="developer">개발자</option>
+				<option value="DBdeveloper">빅데이터개발자</option>
+				<option value="DBA">DBA</option>
+				<option value="im">임베디드개발자</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>email 주소</td>
+		<td><input type="text"/></td>
+	</tr>
+	<tr align="center">
+		<td colspan="2">
+			<input type="button" value="가입신청" onclick="alert('가입신청되었습니다.')"/>
+			<input type="reset" value="취소"/>
+		</td>
+	</tr>
+  </table>
+  </form>
+ </body>
+</html>

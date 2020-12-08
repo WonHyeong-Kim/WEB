@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function allcheck(){
+			mychecklist = document.myform.prd;
+			allchkVal = document.myform.allchk.checked;
+			for(i=0;i<mychecklist.length;i++){
+				mychecklist[i].checked=allchkVal;
+			}
+			calc();
+			//check();
+		}
+		function check(){
+			calc();
+			total=0;
+			for(i=0;i<document.myform.prd.length;i++){
+				if(document.myform.prd[i].checked){
+					total +=mycount[i].value* myprice[i].value;
+				}
+			}
+			document.getElementById("totalprice").innerHTML=total;
+		}	
+		
+		function calc(){
+			total=0;
+			mycheck = document.myform.prd;
+			mycount = document.myform.count;
+			myprice = document.myform.price;
+			price=0;
+			for(i=0;i<mycheck.length;i++){
+				price=0;
+				if(mycheck[i].checked){
+					price = parseInt(mycount[i].value) * parseInt(myprice[i].value);
+				}
+				else{
+					document.myform.allchk.checked=false;
+				}
+				total+=price;
+				document.getElementById("result"+(i+1)).innerHTML=price;
+			}
+			document.getElementById("totalprice").innerHTML=total;
+				
+			/* for(i=0;i<myprice.length;i++){
+				document.getElementById("result"+(i+1)).innerHTML=mycount[i].value* myprice[i].value;
+			} */
+		}
+		
+	</script>
+</head>
+<body>
+	<form name="myform">
+		<table border="1" width="800">
+			<tr>
+				<td><input type="checkbox" name="allchk" onclick="allcheck()"/>항목명</td>
+				<td>상품정보</td>
+				<td>수량</td>
+				<td>판매가</td>
+				<td>구매예정가</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="prd" onclick="calc()"/>완도미역</td>
+				<!--td><input type="checkbox" name="prd" onclick="check()"/>완도미역</td-->
+				<td><img src="../images/pro1.jpg"/></td>
+				<td><input type="number" name="count" value="1" onchange="calc()"/></td>
+				<td>
+				<input type="text" name="price" value="6900"/><span>원</span></td>
+				<td><span></span><span name="sum" id="result1">원</span></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="prd" onclick="calc()"/>스카트 빨아쓰는 휴지</td>
+				<!--td><input type="checkbox" name="prd" onclick="check()"/>스카트 빨아쓰는 휴지</td-->
+				<td><img src="../images/pro2.jpg"/></td>
+				<td><input type="number" name="count" value="1" onchange="calc()"/></td>
+				<td><input type="text" name="price" value="7800"/><span>원</span></td>
+				<td><span></span><span  name="sum" id="result2">원</span></td>
+			</tr>
+			<tr>
+				<td colspan="6" align="right"><span id="totalprice"></span><span>원</span></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

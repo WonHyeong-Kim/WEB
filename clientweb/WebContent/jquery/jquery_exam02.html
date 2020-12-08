@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#id").on("keyup",function(){
+				//userId = $("#id").val();
+				userId = $("input[name='id']").val();
+				if(userId.length<4)	{
+					textInfo="4글자 이상의 글자를 입력하세요"; 
+				}
+				else if(userId == "java"){
+					textInfo="이미 사용중인 아이디 입니다.";
+				}
+				else{
+					textInfo="";
+				}
+				$("#idCheck").text(textInfo);
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>티몬 회원가입</h1>
+	<h2>필수항목</h2>
+	<form action="" name="userInfo">
+		아이디 : <input type="text" name="id" id="id"/>
+	</form>
+	<div id="idCheck" style="color : red; font-weight: bold;"></div>
+</body>
+</html>

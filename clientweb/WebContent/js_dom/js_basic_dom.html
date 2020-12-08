@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+	<script type="text/javascript">
+	// DOM 객체가 생성되고 페이지가 로딩되면 익명함수를 실행
+	// 1. btndomtest라는 id로 정의되어 있는 객체를 찾아와서 클릭이벤트에 반응할 수 있도록 함수를 연결(domTest라는 함수가 callback함수로 연결)
+	window.onload=function(){
+		document.getElementById("btndomtest").onclick=domTest;
+	}
+	// DOM 객체의 구조를 확인할 수 있는 메소드와 DOM API의 속성을 확인.
+	function domTest(){
+		// 모든 div태그를 찾아온다. 모든 div를 NodeList의 형태로 반환(배열로 관리)
+		divNodeList = document.getElementsByTagName("div");
+		//alert(divNodeList);
+		//alert("<div>노드의 개수"+ divNodeList.length);
+		// 배열로 관리 - 모든 div노드를 alert으로 출력하기
+		for(i=0;i<divNodeList.length;i++){
+			//alert(divNodeList[i].id);
+			//alert("<div>태그의 id속성값" + divNodeList[i].getAttribute("id"));
+			if(divNodeList[i].getAttribute("id") == "domtestbtn"){
+				//alert("양식 태그 div");
+				//alert(divNodeList[i].firstChild);
+			}
+			alert("첫 자식 노드  : "+divNodeList[i].nodeName);
+			alert("첫 자식 노드  : "+divNodeList[i].firstChild.nodeName);
+		}
+		// mycontent1객체의 자식노드를 액세스
+		mynode = document.getElementById("mycontent1");
+		nodelist = mynode.childNodes;
+		// 자식노듣들이 배열로 반환되므로 for문을 이용
+		alert("mycontent1의 자식 노드 개수 : "+nodelist.length);
+	}
+	</script>
+<body>
+	<div id="main">
+		<h1 id="myhead">안녕하세요 DOM에 관한 작업을 수행 중입니다.</h1>
+		<div id="mycontent1">
+		<img src="../images/m_garden07.jpg" name="myimg" id="myimagId"
+				alt="이미지파일" />
+				<h3>이미지파일</h3>
+				</div>
+		<div id="mycontent2">DOM의 구조를 볼까~~</div>
+		<div id="domtestbtn">
+			<form id="myformId" name="myform">		
+				<input type="button" value="dom구조확인하기"
+					 name="btn" id="btndomtest" />
+				<input type="button" value="노드삽입하기"
+					 name="btn" id="btninsert" />
+				<input type="button" value="이미지노드삽입하기"
+					 name="btn" id="imginsert" />					 
+				<input type="button" value="특정노드전에 삽입하기"
+					 name="btn" id="btninsertbefore" />
+				<input type="button" value="특정노드삭제하기"
+					 name="btn" id="btndelete" />
+			</form>
+			
+		</div>
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+

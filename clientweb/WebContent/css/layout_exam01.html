@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>New Document</title>
+<style type="text/css">
+	/* h1 {
+		width: 900px;
+		background-color:#336699;
+		padding-top: 0px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0px;
+		} */
+/* 	#docuLeft{
+		padding:0px;
+		width: 580px;
+		height:550px;
+		float: left;
+	}
+	#docuRight{
+		padding:0px;
+		width: 300px;
+		height:550px;
+		float: right;
+		background-color: #99cc33;
+	}
+	#docu{
+		width: 900px;
+		height:550px;
+		margin-top:auto;
+		margin-bottom:auto;
+		margin-left: auto;
+		margin-right: auto;
+	} */
+	#outter{
+		width:95%; /* 접속기기에 따라서 95%의 사이즈가 달라진다. 크로스 브라우징 이슈를 해결할 수 있다.(브라우저마다 혹은 접속기기마다
+						달라지는 화면을 제어할 수 있다.)  */
+		margin-left: auto;
+		margin-right: auto;
+		text-align: justify;
+	}
+	#header{
+		background-color:#336699;
+	}
+	#content{
+		width: 65%;
+		float: right;
+	}
+	#menu{
+		background-color: #99cc33;
+		width: 30%;
+		float:right;
+		margin-left: 10px;
+	}
+	#footer{
+		background-color: #cccc99;
+		clear: both;
+	}
+</style>
+</head>
+<body>
+	<div id="header">
+		<h1>헤더 영역입니다.</h1>
+	</div>
+	<div id="outter">
+		<div id="menu">
+			<p id="docuRight">메뉴 Nothing too complex, but still pretty cool right? Child’s
+				play you say. Ok, well before we get into the part where floats usher
+				in a world of bacon-loving unicorns, let’s back up for a second to
+				talk about what’s actually happening here. In the web world, our HTML
+				is bound by some rules, in particular, the normal flow. In the normal
+				flow, each block element (div, p, h1, etc.) stacks on top of each
+				other vertically, from the top of the viewport down. Floated elements
+				are first laid out according to the normal flow, then taken out of the
+				normal flow and sent as far to the right or left (depending on which
+				value is applied) of the parent element. In other words, they go from
+				stacking on top of each other to sitting next to each other, given
+				that there is enough room in the parent element for each floated
+				element to sit. This behavior is crucial to remember as you build your
+				websites.</p>
+		</div>
+		<div id="content">
+			<p>The float property is a valuable and powerful asset to any web
+				designer/developer working with HTML and CSS. Tragically, it can also
+				cause frustration and confusion if you don’t fully understand how it
+				works. Also, in the past, it’s been linked to some pretty nasty
+				browser bugs so it's normal to get nervous about using the float
+				property in your CSS rule sets. Let’s calm those nerves and ease that
+				frustration. I’ll show you exactly what the float property does to
+				your elements and how incredibly useful it can be once you master it.
+			</p>
+			<p>We see floats in the print world every time we pick up a
+				magazine article with an image on the left or right with text flowing
+				nicely around it. In the world of HTML/CSS, text will wrap around an
+				image with the float property applied to it, much like in a magazine
+				layout. Images are just one of the many use cases for the float
+				property: we can also achieve the popular two-column layout using
+				floats. In fact, you can float just about any element in your HTML. By
+				learning and understanding float property basics, along with position
+				property basics, you will be able to achieve any layout with
+				confidence.</p>
+			<p>The float property has four values that we can apply to it:
+				left, right, inherit, and none. Each value is pretty self explanatory.
+				For example, if you assign float: left to an element, it will move to
+				the left-most boundary of its parent element. The same idea applies if
+				you were to assign float: right; to an element. That element would be
+				sent off to the right-most boundary of its parent element. The inherit
+				value tells an element to inherit the float value of its parent
+				element. The value none is the default value and tells an element not
+				to float at all.</p>
+		</div>
+		
+	</div>
+	<div id="footer">
+		<p>푸터 영역입니다.</p>
+	</div>
+</body>
+</html>

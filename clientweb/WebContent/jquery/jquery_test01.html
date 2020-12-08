@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="../common/css/my_style.css">
+	<script type="text/javascript" src="../common/js/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#clickMe").click(function(){
+			//jQuery("#clickMe").click(function(){
+			// document.getElementById("clickMe").onclick = function(){}
+				//alert("jQuery실행완료");
+				//picframe의 display 속성을 none에서 block
+			$("#picframe").slideToggle();
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div id="clickMe">여기를 누르세요</div>
+	<div id="picframe">
+		<img src="../images/m_garden01.jpg"/>
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

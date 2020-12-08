@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		jumsu=prompt("점수를 입력해주세요");
+		
+		if(jumsu<0 || jumsu>100){
+			alert("점수잘못입력");
+		}
+		else{
+			score=Math.floor(jumsu/10);
+			//console.log(score);
+			switch(score){
+			case 10:
+			case 9:
+				alert("수");
+				break;
+			case 8:
+				alert("우");
+				break;
+			case 7:
+				alert("미");
+				break;
+			case 6:
+				alert("양");
+				break;
+			default:
+				alert("가");
+				break;
+				
+			}
+		}
+	
+	</script>
+</body>
+</html>

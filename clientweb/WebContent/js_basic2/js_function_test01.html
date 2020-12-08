@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		// 함수를 선언하는 방법
+		// 1. 리턴값이 없고 매개변수가 없는 함수
+		function test1(){
+			num1=100;
+			num2=200;
+			
+			alert("test1함수"+(num1+num2)); // num1+num2가 계산되지 않은 이유 : "test1함수:" 문자열에 열향을 받아서 num1이 문자열이 되면서 +가 연결 연산자로 실행.
+		}
+		// 2. 리턴값이 없고 매개변수가 있는 함수
+		// => 매개변수가 있다는 것은 함수를 사용할 수 있는 경우의 수가 더 많아졌다는 의미
+		function test2(num1, num2){
+			alert("test2함수"+(num1+num2));
+		}
+		// 3 리턴값이 있고 매개변수가 있는 함수
+		function test3(num1, num2){
+			// 함수에서 계산된 값을 사용하는 것이 아니라 함수를 호출한 곳으로 리턴하기 위해서 (되돌려주기 위해서) 값을 또 다른 변수에 저장한다.
+			return num1+num2; // 값이나 변수나 메소드(함수) 호출문
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		//함수를 호출하는 방법
+		// 1. 리턴값이 없고 매개변수가 없는 함수의 호출
+		test1();
+		// 2. 리턴값이 없고 매개변수가 있는 함수의 호출
+		test2(100, 500);
+		test2(1000, 2000);
+		// 3. 리턴값이 있고 매개변수가 있는 함수의 호출
+		mydata=test3(100, 1000);
+		document.write("함수의 호출결과=>"+mydata);
+		
+		//prompt의 결과가 문자열이므로 이를 숫자로 변경하는 함수를 사용
+		num1=parseInt(prompt("숫자1입력"));
+		num1=parseInt(prompt("숫자2입력"));
+		mydata2=test3(num1,num2);
+		if(mydata2>=1000)
+		{
+			document.write("test3함수의 호출결과=>"+mydata2+"=> 통과 <br/>");
+		}
+		else
+		{
+			document.write("test3함수의 호출결과=>"+mydata2+"=> 재시도 <br/>");
+		}
+		
+	</script>
+	<input type="button" value="함수의 호출" onclick="test2(1000,2000)" />
+	<a href="javascript:test2(1000,3000)">함수의 호출</a>
+</body>
+</html>

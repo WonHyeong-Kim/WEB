@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>vending machine</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="./common/css/vending_machine_style.css">
+	<script src="./common/js/vending_machine.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="outer">
+		<div id="header">
+			<div id="name">Vending Machine</div>
+		</div>
+		<div id="machineFunction">
+			<div id="itemBox">
+				<ul class="firstCol">
+					<li>
+						<img id="item1" src="./image/item1.png" class="item" alt="item01"/>
+						<div id="minusItem1" class="minus">-</div>
+						<div class="itemInfo">
+							<div id="itemName1" class="itemName"></div>
+							<div id="itemPrice1" class="itemPrice"></div>
+						</div>
+						<div id="plusItem1"class="plus">+</div>
+					</li>
+					<li>
+						<img id="item2" src="./image/item2.png" class="item" alt="item02"/>
+						<div id="minusItem2" class="minus">-</div>
+						<div class="itemInfo">
+							<div id="itemName2" class="itemName"></div>
+							<div id="itemPrice2" class="itemPrice"></div>
+						</div>
+						<div id="plusItem2"class="plus">+</div>
+					</li>
+					<li>
+						<img id="item3" src="./image/item3.png" class="item" alt="item03"/>
+						<div id="minusItem3" class="minus">-</div>
+						<div class="itemInfo">
+							<div id="itemName3" class="itemName"></div>
+							<div id="itemPrice3" class="itemPrice"></div>
+						</div>
+						<div id="plusItem3"class="plus">+</div>
+					</li>
+				</ul>
+				<ul class="secondCol">
+					<li>
+						<img id="item4" src="./image/item4.png" class="item" alt="item04"/>
+						<div id="minusItem4" class="minus">-</div>
+						<div class="itemInfo">
+							<div id="itemName4" class="itemName"></div>
+							<div id="itemPrice4" class="itemPrice"></div>
+						</div>
+						<div id="plusItem4"class="plus">+</div>
+					</li>
+					<li>
+						<img id="item5" src="./image/item5.png" class="item" alt="item05"/>
+						<div id="minusItem5" class="minus">-</div>
+						<div class="itemInfo">
+							<div id="itemName5" class="itemName"></div>
+							<div id="itemPrice5" class="itemPrice"></div>
+						</div>
+						<div id="plusItem5"class="plus">+</div>
+					</li>
+					<li>
+						<img id="item6" src="./image/item6.png" class="item" alt="item06"/>
+						<div id="minusItem6" class="minus">-</div>
+						<div class="itemInfo">
+							<div id="itemName6" class="itemName"></div>
+							<div id="itemPrice6" class="itemPrice"></div>
+						</div>
+						<div id="plusItem6"class="plus">+</div>
+					</li>
+				</ul>
+				<ul class="thirdCol">
+					<li>
+						<img id="item7" src="./image/item7.png" class="item" alt="item07"/>
+						<div id="minusItem7" class="minus">-</div>
+						<div class="itemInfo">
+							<div id="itemName7" class="itemName"></div>
+							<div id="itemPrice7" class="itemPrice"></div>
+						</div>
+						<div id="plusItem7"class="plus">+</div>
+					</li>
+					<li>
+						<img id="item8" src="./image/item8.png" class="item" alt="item08"/>
+						<div id="minusItem8" class="minus">-</div>
+						<div class="itemInfo">
+							<div id="itemName8" class="itemName"></div>
+							<div id="itemPrice8" class="itemPrice"></div>
+						</div>
+						<div id="plusItem8"class="plus">+</div>
+					</li>
+					<li>
+						<img id="item9" src="./image/item9.png" class="item" alt="item09"/>
+						<div id="minusItem9" class="minus">-</div>
+						<div class="itemInfo">
+							<div id="itemName9" class="itemName"></div>
+							<div id="itemPrice9" class="itemPrice"></div>
+						</div>
+						<div id="plusItem9"class="plus">+</div>
+					</li>
+				</ul>
+				<ul class="forthCol">
+					<li>
+						<img id="item10" src="./image/item10.png" class="item" alt="item10"/>
+						<div id="minusItem10" class="minus">-</div>
+						<div class="itemInfo">
+							<div id="itemName10" class="itemName"></div>
+							<div id="itemPrice10" class="itemPrice"></div>
+						</div>
+						<div id="plusItem10"class="plus">+</div>
+					</li>
+					<li>
+						<img id="item11" src="./image/item11.png" class="item" alt="item11"/>
+						<div id="minusItem11" class="minus">-</div>
+						<div class="itemInfo">
+							<div id="itemName11" class="itemName"></div>
+							<div id="itemPrice11" class="itemPrice"></div>
+						</div>
+						<div id="plusItem11"class="plus">+</div>
+					</li>
+					<li>
+						<img id="item12" src="./image/item12.png" class="item" alt="item12"/>
+						<div id="minusItem12" class="minus">-</div>
+						<div class="itemInfo">
+							<div id="itemName12" class="itemName"></div>
+							<div id="itemPrice12" class="itemPrice"></div>
+						</div>
+						<div id="plusItem12"class="plus">+</div>
+					</li>
+				</ul>
+			</div>
+			<div id="work">
+				<div>
+					<div id="amount">잔액이 없습니다.</div>
+					<div id="info">투입구에 돈을 넣으세요.(drag)</div>
+					<div id="droppable" class="ui-widget-header">
+			  			<p>화 폐 <br>투 입 구</p>
+					</div>
+					<div id="set" style ="background:url('./image/set_button.ico'); background-size: 100%;"></div>
+					<div id="resetOuter">
+						<div id="reset" style ="background:url('./image/return.png'); background-size: 100%; background-repeat: no-repeat; background-position: center;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="output">OUT PUT</div>
+		<div id="coin"><img src="./image/coin.png"></div>
+	</div>
+	<img id="leftLeg" src="./image/leg.PNG"/><img id="rightLeg" src="./image/leg.PNG"/>
+	<div id="pocket">
+			<button type="button" class="btn btn-warning" id="pocketHide">&gt;</button>
+			<button type="button" class="btn btn-warning" id="pocketHide2" style="display:none;">&lt;</button>
+			<div id="money_100" class="ui-widget-content" style ="background:url('./image/money_100.PNG'); background-size: 100%;" >100</div>
+			<div id="money_500" class="ui-widget-content" style ="background:url('./image/money_500.PNG'); background-size: 100%;">500</div>
+			<div id="money_1000" class="ui-widget-content" style ="background:url('./image/money_1000.PNG'); background-size: 100%;">1000</div>
+			<div id="money_5000" class="ui-widget-content" style ="background:url('./image/money_5000.PNG'); background-size: 100%;">5000</div>
+			<div id="money_10000" class="ui-widget-content" style ="background:url('./image/money_10000.PNG'); background-size: 100%;">10000</div>
+			<div id="money_50000" class="ui-widget-content" style ="background:url('./image/money_50000.PNG'); background-size: 100%;">50000</div>
+	</div>
+	<div id="basket">
+		<button type="button" class="btn btn-success" id="basketHide">&gt;</button>
+		<button type="button" class="btn btn-success" id="basketHide2" style="display:none;">&lt;</button>
+		<div id="myList"></div>
+	</div>
+</body>
+</html>

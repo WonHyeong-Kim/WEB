@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function calc(){
+			// name속성이 myform인 form객체 내부에 하위로 정의된 num1텍스트 상자의 값을 읽어서 mynum1변수에 저장
+			mynum1 = myform.num1.value;//value속성이 getter로 사용
+			//myform객체의 num2텍스트 상자에 myfum1의 1.2를 곱한 값을 출력
+			myform.num3.value = mynum1*1.2;//value속성이 setter로 사용
+		}
+		function calc2(){
+			mynum2 = myform.num1.value;//value속성이 getter로 사용
+			myform.num3.value = mynum2*1.2;//value속성이 setter로 사용
+		}
+		// show는 매개변수로 현재 작업중인 form객체를 전달받는다.
+		function showdate(workingform){
+			mynum1 = workingform.num1.value;
+			//id속성이 result인 객체를 가져와서 innerHTML은 객체에 html태그를 추가
+			// innerHTML은 div, p , span 태그 내에서 사용할 수 있다.
+			document.getElementById("result").innerHTML = mynum1;
+		}
+	</script>
+</head>
+<body onload="alert('반갑습니다.')">
+<!-- calc함수는 함수 내부에서 객체의 이름을 명시하고 있기 때문에 동일한 작업이라고 하더라도 객체의 이름이 달라지면 함수를 또 정의해서 사용해야한다. -->
+<!-- showdata는 어떤 form에서 작업하더라도 모두 반응할 수 있도록 작성
+	 this.form을 매개변수로 전달
+	 this.form -> 현재 작업중인 form 객체를 의미 -->
+	<form action="" name="myform">
+		<input type="text" name="num1" onkeyup="calc()"/>
+		<input type="text" name="num2" onchange="calc2()"/>
+		<input type="text" name="num3"/>
+		<input type="button" value="전송1" onclick="showdate(this.form)"/>
+	</form>
+	<hr/>
+	
+<!-- 객체명이 달라진다고 하더라도 작업이 동일한 경우 하나의 함수를 이용해서 작업할 수 있도록 변경 -->
+	<form action="" name="myform2">
+		<input type="text" name="num1" onkeyup="calc()"/>
+		<input type="text" name="num2" onchange="calc2()"/>
+		<input type="text" name="num3"/>
+		<input type="button" value="전송1" onclick="showdate(this.form)"/>
+	</form>
+	<hr/>
+	<form action="" name="myform3">
+		<input type="text" name="num1" onkeyup="calc()"/>
+		<input type="text" name="num2" onchange="calc2()"/>
+		<input type="text" name="num3"/>
+		<input type="button" value="전송1" onclick="showdate(this.form)"/>
+	</form>
+	<hr/>
+	<div id="result" style="color: red; font-weight: bolder;"></div>
+	<!-- 마우스 관련 이벤트 -->
+	<img alt="" src="../images/ses_g1.jpg" name="myimg"
+		onmouseover="myimg.src='../images/ses_g2.jpg'"
+		onmouseout="myimg.src='../images/ses_g1.jpg'"
+		/>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	today = new Date();
+	dday = new Date();
+	
+	dday.setMonth(11);
+	dday.setDate(3);
+	
+	day = (dday-today)/1000/60/60/24;
+	console.log(day);
+	
+	document.write("12월 3일까지 D-day는 "+day+"일");
+	</script>
+</body>
+</html>

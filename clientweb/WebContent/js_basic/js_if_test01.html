@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//1. 조건이 만족하는 경우에만 실행할 명령문이 있는 경우
+		//점수가 90이상리면 통과라는 message를 alert로 실행. 	
+		score = 59;
+		if(score>=90) {
+			alert("통과");
+			alert("조건만족");
+		}
+		alert("완료");
+		//2. 조건을 만족하는 경우와 조건을 만족하지 않는 경우에 실행할 명령문이 각각 있는 경우
+		// 점수가 90이상이면 합격, 90미만이면 불합격이라는 메시지를 document에 출력
+		if(score>=90){
+			document.write("<h2>합격</h2>");
+			//alert("합격");
+		}
+		else{
+			document.write("<h2>불합격</h2>");
+			//alert("불합격");
+		}
+			
+	</script>
+</body>
+</html>

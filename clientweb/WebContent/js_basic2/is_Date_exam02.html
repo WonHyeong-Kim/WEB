@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	today = new Date();
+	hours= today.getHours()
+	console.log(hours);
+	if(hours<12){ //오전
+		document.bgColor="green";
+	}
+	else{
+		document.bgColor="red";
+	}
+	day=today.getDay();
+	document.write("<img src='../images/jang"+(day+1)+".jpg'/>");
+	/* 	switch (day) {
+	case 0:
+		img="1.jpg'";
+		break;
+	case 1:
+		img="2.jpg'";
+		break;
+	case 2:
+		img="3.jpg'";
+		break;
+	case 3:
+		img="4.jpg'";
+		break;
+	case 4:
+		img="5.jpg'";
+		break;
+	case 5:
+		img="6.jpg'";
+		break;
+	case 6:
+		img="7.jpg'";
+		break;
+	default:
+		img="1.jpg'";
+		break;
+	} */
+	
+	
+	</script>
+</body>
+</html>

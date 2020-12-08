@@ -1,0 +1,37 @@
+@charset "UTF-8";
+#header{
+	width:90%;
+	font-family: "굴림체";
+	color:blue;
+	margin:auto;
+}
+#footer{
+	width:90%;
+	font-family: "굴림체";
+	color:blue;
+	clear:both;
+	margin:auto;
+}
+#img1>img{
+	margin:30px;
+	width: 150px;
+	height: 150px;
+	float: left;
+}
+#img2>img{
+	margin:30px;
+	width: 150px;
+	height: 150px;
+	float: left;
+}
+#img3>img{
+	margin:30px;
+	width: 150px;
+	height: 150px;
+	float: left;
+}
+#outer{
+	width:90%;
+	margin:auto;
+	
+}

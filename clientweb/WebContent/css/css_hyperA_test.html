@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		a:link{/* 하이퍼링크 방문 전 */
+			color: black;
+			text-decoration: none;
+		}
+		a:visited {/* 하이퍼링크 클릭 후 */
+			color: yellow;
+			
+		}
+		a:hover {/* 마우스 포인터를 올려 놓는 상황.  a:hover는 a:link, a:visited뒤에 정의 되어야한다.*/
+			color: red;
+			text-decoration: underline;
+		}
+		a:active {/* 마우스를 클릭하는 시점. a:active는 a:hover 다음에 정의되어야 한다.*/
+			color: orange;
+		}
+	</style>
+</head>
+<body>
+	<h1>하이펑크에서 사용할 수 있는 pseudo선택자</h1>
+	<a href="http://www.google.com">구글</a>
+	<a href="http://www.kitri.re.kr">kitri</a>
+	<a href="http://data.seoul.go.kr">서울시 데이터센터</a>
+	<a href="http://www.data.go.kr">정부 데이터센터</a>
+</body>
+</html>

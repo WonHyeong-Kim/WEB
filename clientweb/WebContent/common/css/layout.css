@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+h1 {
+	font-size: 30px;
+	font-family: 굴림;
+	color: #107b81;
+}
+
+#garden {
+	padding-left: 100px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 15px;
+	font-style: italic;
+	background-color: #a7cece;
+	height: 100px;
+	background-image: url("/clientweb/images/background.gif");
+	background-repeat: no-repeat;
+	position: static;
+	margin: 30px;
+	border-radius: 20px;
+	overflow: auto;
+}
+
+#morning {
+	float: left;
+}
+#smalltitle{
+	color: #107b81;
+}
+#ext {
+	float: left;
+}
+
+#content {
+	float: left;
+	width: 85%;
+}
+
+#garden02 {
+	width: 14%;
+	float: left;
+	border: solid #107b81 1px;
+	text-align: center;
+}
+#footer{
+	text-align: center;
+	clear: both;
+}
+h3{
+	color:#ff3838;
+}

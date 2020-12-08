@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 브라우저에 탑재되어 있는 자바스크립트 해석기가 내장하고 있는 Date객체를 사용할 수 있도록 메모리에 생성
+		// 메모리에 생성해놀은 Date객체를 today변수가 참조한다.
+		today=new Date();// Date객체는 년월일 시분초를 관리하는 객체
+		document.write(today+"<br/>");
+		
+		str=today.getFullYear()+"년";
+		str+=(today.getMonth()+1)+"월"; // 자바, 자바스크립트에서 사용하는 index는 0 1월이 0
+		str+=today.getDate()+"일";
+		str+=today.getHours()+"시";
+		str+=today.getMinutes()+"분";
+		str+=today.getSeconds()+"초";
+		
+		//요일
+		day=today.getDay(); // getDay는 요일의 index를 추출 - 일요일 - 0
+		document.write("<h2>"+str+day+"<h2/>");
+		
+		weekday="";
+		switch (day) {
+		case 0:
+			weekday="Sunday";
+			break;
+		case 1:
+			weekday="Monday";
+			break;
+		case 2:
+			weekday="Tuesday";
+			break;
+		case 3:
+			weekday="Wenday";
+			break;
+		case 4:
+			weekday="Therday";
+			break;
+		case 5:
+			weekday="Frieday";
+			break;
+		case 6:
+			weekday="Saterday";
+			break;
+		default:
+			break;
+		}
+		str+=weekday;
+		document.write("<h2>"+str+"<h2/>");
+		
+		// 날짜 데이터를 새로운 값으로 설정할 때 사용 : setXXX메소드
+		myday = new Date();
+		myday.setMonth(7);//8월 설정
+		myday.setDate(1);//1일 설정
+		document.write("<h2>"+myday+"<h2/>");
+		
+		myimg="01.jpg";
+		document.write("<img src=../images/m_garden"+myimg)+"/>";
+		document.bgColor="yellow";//테스트용
+		
+		
+	</script>
+</body>
+</html>

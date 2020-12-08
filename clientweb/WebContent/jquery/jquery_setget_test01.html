@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="test1">jquery~~~</div>
+	<div class="test2">jquery~~~~</div>
+	<div id="test3">jquery~~~~</div>
+	<div id="test4">jquery~~~~</div>
+	<div id="test5">jquery~~~~</div>
+	<p>jquery연습중..</p>
+	<div id="result1"></div>
+	<div id="result2"></div>
+	<form>
+		<input type="number" id="data1" />
+		<input type="number" id="data2" />
+		<input type="button" id="btn" value="값가져오기" />
+		
+	</form>
+	<script type="text/javascript">
+		/*text()->요소의 텍스트 반환
+		  html()->선택한 요소의 html태그가 포함된 컨텐츠 반환
+		  val()->입력필드의 값을 반환
+		  attr()->요소의 속성을 반환
+		  position()-> 요소의 위치 반환
+		*/
+		// DOM 노드 액세스
+		$(document).ready(function(){
+			$(".test1").css({"color":"blue","border":"solid 1px red"});//json 포맷
+			$("p").hide(); // css의 display속성을 none적용한것과 동일한 결과
+			$("#result1").text("<h1>div에 값 설정하기 - 텍스트 추가</h1>"); //<h1>문자열 취급
+			$("#data1").on("keyup",function(){
+				myval = parseInt($("#data1").val())+1000;
+				$("#result1").text(myval);
+			});
+			$("#btn").on("click",function(){
+				textVal=$("#result1").text();
+				alert(textVal);
+				$("#data2").val(textVal);
+				
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+

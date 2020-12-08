@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		body{
+			color:blue;
+		}
+	</style>
+	<script type="text/javascript">
+		// 자바스크립트에서 전역변수와 지역변수를 정의할 수 있다.
+		// 함수끼리 변수를 공유할때 유용하게 사용할 수 있다.
+		// 1. function 밖에서 변수를 선언하는 경우 - 전역변수
+		num1=100;
+		
+		// 4. var키워드를 이용해서 function 밖에서 정의하는 변수 - 전역변수
+		// => 함수 밖에서 선언된 변수는 무조건 전역변수
+		var num4=400;
+	 	function test1(){
+	 	// 2. function 내부에서 변수를 선언하는 경우 - 전역변수
+	 	// 반드시 변수가 선언된 function부터 실행되어야한다.
+	 	
+			 num2=200;
+		// 3. var키워드를 이용해서 function내부에서 정의하는 변수 - 지역변수
+			var num3=300;
+		 	document.write("test1에서 num1을 사용=>"+num1+"<br/>");
+		 	document.write("test1에서 num2을 사용=>"+num2+"<br/>");
+		 	document.write("test1에서 num3을 사용=>"+num3+"<br/>");
+		 	document.write("test1에서 num4을 사용=>"+num4+"<br/>");
+	 	}
+		function test2(){
+			document.write("test2에서 num1을 사용=>"+num1+"<br/>");
+			document.write("test2에서 num2을 사용=>"+num2+"<br/>");
+			//document.write("test2에서 num3을 사용=>"+num3+"<br/>");
+			document.write("test2에서 num4을 사용=>"+num4+"<br/>");
+	 	}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		//test2();
+		test1();
+		test2();	
+		document.write("body에서 num1을 사용=>"+num1+"<br/>");
+		document.write("body에서 num2을 사용=>"+num2+"<br/>");
+		document.write("body에서 num3을 사용=>"+num3+"<br/>");
+		document.write("body에서 num4을 사용=>"+num4+"<br/>");
+	</script>
+</body>
+</html>

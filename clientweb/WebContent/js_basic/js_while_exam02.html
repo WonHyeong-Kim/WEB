@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		index=prompt("구구단의 몇단을 출력할까요?");
+	
+		document.write("<table border='1' style = 'border-collapse : collapse;' align='center' width='50'>");
+		i=1;
+		// for문은 반복횟수
+		// while문은 조건
+		while(i<=9) // true나 false를 결과로 되돌려주는 메소드 호출.
+		{
+			document.write("<tr align='center' bgcolor='yellow'><td>"+index+"*"+i+"="+index*i+"</td></tr>");
+			i++;
+		}
+		document.write("<table>");
+	</script>
+</body>
+</html>

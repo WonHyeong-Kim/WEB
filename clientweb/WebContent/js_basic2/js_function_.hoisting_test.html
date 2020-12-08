@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<h1>함수의 호이스팅 테스트</h1>
+	<p>
+		자바스크립트에서는 함수의 선언부를 다른 스크립트의 명령문 보다 더 먼저 읽는다.
+		정의된 함수나 변수를  Global영역의 최우선 영역으로 자바스크립트 인터프리터.
+		이름 함수의 호이스팅이라 한다.
+		그러므로 함수의 선언문보다 함수의 호출문이 먼저 나와도 오류가 발생하지않고 실행된다.
+		그러나 선언도 되기 전에 실행해버리는 엉성한 코드가 만들어지고 Global영역에 많이 추가되면 해석하고 인식시키기 위해서
+		필요한 시간이 있고 실행되는 시점, 클라이언트로 해석한 경과를 만들어서 response할 시간이 늦어지게 된다.
+		많은 자바스크립트 전문가들은 함수를 선언문의 형태로 정의해서 쓰지 말고 표현식의 형태로 상용하기를 권고하고 있다.
+	</p>
+	<script type="text/javascript">
+		test(100);
+		function test(num){
+			if(num>90){
+				console.log("합격");
+			}
+			else{
+				console.log("불합격");
+			}
+			
+		}
+	</script>
+</body>
+</html>

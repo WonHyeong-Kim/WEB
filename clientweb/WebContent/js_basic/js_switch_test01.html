@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//js_multi_if_test01.html을 switch문 사용해서 변경
+		
+		ssn=prompt("주민번호7번째 숫자를 입력하세요");
+		switch(ssn){ // ssn을 평가
+		case "1":
+			alert("남자");
+			break;
+		case "2": // 조건에 만족하는 case를 찾아서 switch문의 끝까지 쭉 실행 따라서 실행을 멈추기 위해서 break문을 이용
+			alert("여자");
+			break;
+		case "3":
+			alert("남자");
+			break;
+		case "4":
+			alert("여자");
+			break;
+		default:
+			alert("기타");
+			break;
+		}
+		alert("코드변경");
+		ssn=prompt("주민번호7번째 숫자를 입력하세요");
+		switch(ssn){ // ssn을 평가
+		case "1":
+		case "3":
+			alert("남자");
+			break;
+		case "2":
+		case "4":
+			alert("여자");
+			break;
+		default:
+			alert("기타");
+			break;
+		}
+		
+		
+		
+	</script>
+</body>
+</html>

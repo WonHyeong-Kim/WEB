@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function showImg(){
+			myval=prompt("값을 입력하세요");
+			if(myval>90){
+				document.write("<img src='/clientweb/images/jang1.jpg'/>");
+			}
+			else{
+				document.write("<img src='/clientweb/images/garden01.jpg'/>");
+			}	
+		}
+		function showImgVal(){
+			if(myval>90){
+				document.write("<img src='/clientweb/images/jang1.jpg'/>");
+			}
+			else{
+				document.write("<img src='/clientweb/images/garden01.jpg'/>");
+			}	
+		}
+	
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		showImg();
+		myval=prompt("값을 입력하세요");
+		showImgVal(myval);
+	</script>
+</body>
+</html>

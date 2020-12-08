@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//다중if
+		//주민번호의 7번째 숫자를 입력 받아서 남자 여자를 출력
+		ssn = prompt("주민번호7번쨰  숫자를 입력하세요");
+		
+		alert("다중if");
+		if(ssn==1)
+			alert("남자");
+		else if(ssn==2)
+			alert("여자");
+		else if(ssn==3)
+			alert("남자");
+		else if(ssn==4)
+			alert("여자");
+		else
+			alert("기타");
+		
+		alert("향상된 다중if");
+		if(ssn==1 || ssn==3)
+			alert("남자");
+		else if(ssn==2 || ssn==4)
+			alert("여자");
+		else
+			alert("기타");
+	</script>
+</body>
+</html>
